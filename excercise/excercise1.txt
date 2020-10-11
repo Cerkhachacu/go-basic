@@ -1,0 +1,12 @@
+Buatlah function untuk mencetak gambar dibawah ini, yang mempunyai
+sebuah parameter sebagai panjang lebar gambar. Parameter haru merupakan
+bilangan ganjil:
+Misalnya jika dijalankan:
+    cetak_gambar(5);
+Ouput:
+
+*  =  =  =  *
+*  =  =  =  *
+*  *  *  *  *
+*  =  =  =  *
+*  =  =  =  *
