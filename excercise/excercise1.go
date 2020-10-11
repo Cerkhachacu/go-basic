@@ -22,7 +22,7 @@ func main() {
 				mid := math.Round(float64(number) / 2)
 				var r float64 = 1
 				firstCol := true
-				for i < numberCu {
+				for i < numberCu { // creating the input
 					if i%number != 0 {
 						if firstCol {
 							fmt.Print("*")
