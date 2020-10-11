@@ -25,14 +25,14 @@ func main() {
 				for i < numberCu { // creating the input
 					if i%number != 0 {
 						if firstCol {
-							fmt.Print("*")
+							fmt.Print("* ")
 							firstCol = false
 						} else {
 							if r == mid {
-								fmt.Print("*")
+								fmt.Print("* ")
 								firstCol = false
 							} else {
-								fmt.Print("=")
+								fmt.Print("= ")
 							}
 						}
 					} else {
