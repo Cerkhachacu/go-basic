@@ -11,12 +11,12 @@ import (
 func main() {
 	// request input number
 	reader := bufio.NewScanner(os.Stdin)
-	fmt.Print("Enter text: ")
+	fmt.Print("Enter odd number bigger than 1 : ")
 	scanner := reader.Scan() // scan input
 	if scanner {             //if input exist
 		number, err := strconv.ParseInt(reader.Text(), 10, 32) // conver input into integer
 		if err == nil {                                        // success convert to integer
-			if number%2 != 0 { // cek if input is odd number
+			if number%2 != 0 && number > 1 { // cek if input is odd number
 				var numberCu int64 = number*number + 1
 				var i int64 = 1
 				mid := math.Round(float64(number) / 2)
@@ -43,7 +43,7 @@ func main() {
 					i++
 				}
 			} else { // if the input is not an odd number print error
-				fmt.Println("Please input odd number only")
+				fmt.Println("Please input odd number that is bigger than one")
 			}
 		} else { // if the input is not a number
 			fmt.Println("Invalid input, only number is accepted")
