@@ -28,7 +28,7 @@ func patternH1(number int64) { // success convert to integer
 	if number%2 != 0 && number > 1 { // cek if input is odd number
 		var numberCu int64 = number*number + 1
 		var i int64 = 1
-		mid := math.Round(float64(number) / 2)
+		mid := math.Ceil(float64(number) / 2)
 		var r float64 = 1
 		firstCol := true
 		for i < numberCu { // as long as
@@ -52,7 +52,7 @@ func patternH1(number int64) { // success convert to integer
 			i++
 		}
 	} else { // if the input is not an odd number print error
-		fmt.Println("Please input odd number that is bigger than one")
+		fmt.Println("Please input an odd number that is bigger than one")
 	}
 }
 
@@ -75,7 +75,7 @@ func patternH2(number int64) { // success convert to integer
 			i++
 		}
 	} else { // if the input is not an odd number print error
-		fmt.Println("Please input odd number that is bigger than one")
+		fmt.Println("Please input an odd number that is bigger than one")
 	}
 
 }
