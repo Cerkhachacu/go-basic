@@ -15,7 +15,7 @@ func main() {
 	fmt.Print("Enter odd number bigger than 1 : ")
 	scanner1 := reader1.Scan() // scan input
 	reader2 := bufio.NewScanner(os.Stdin)
-	fmt.Print("Chose method 1 or 2 : ")
+	fmt.Print("Chose method 1, 2 or 3 : ")
 	scanner2 := reader2.Scan() // scan input
 	if scanner1 {              //if input exist
 		number, err := strconv.ParseInt(reader1.Text(), 10, 32) // conver input into integer
@@ -28,6 +28,8 @@ func main() {
 						patternH1(number) // calling function to create the pattern
 					case 2:
 						patternH2(number)
+					case 3:
+						patternH3(number)
 					default:
 						fmt.Println("Please chose between method 1 or 2.")
 					}
@@ -94,5 +96,35 @@ func patternH2(number int64) { // success convert to integer
 	} else { // if the input is not an odd number print error
 		fmt.Println("Please input an odd number that is bigger than one")
 	}
+}
 
+func patternH3(number int64) { // success convert to integer
+	if number%2 != 0 && number > 1 { // cek if input is odd number
+		var i float64 = 1
+		var j float64 = 2
+		mid := math.Ceil(float64(number) / 2)
+		for i <= float64(number) {
+			fmt.Print("* ")
+			for j <= float64(number) {
+				if i == mid {
+					if j < float64(number) {
+						fmt.Print("* ")
+					} else {
+						fmt.Print("*\n")
+					}
+				} else {
+					if j != float64(number) {
+						fmt.Print("= ")
+					} else {
+						fmt.Print("*\n")
+					}
+				}
+				j++
+			}
+			j = 2
+			i++
+		}
+	} else { // if the input is not an odd number print error
+		fmt.Println("Please input an odd number that is bigger than one")
+	}
 }
