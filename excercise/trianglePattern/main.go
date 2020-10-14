@@ -46,7 +46,7 @@ func main() {
 	fmt.Print("Please enter the length of the Isosceles triangle : ")
 	scanner1 := reader1.Scan() // scan input
 	reader2 := bufio.NewScanner(os.Stdin)
-	fmt.Print("Chose rataKanan (1) or rataKiri(2) : ")
+	fmt.Print("Chose rataKanan (1) or rataKiri (2) : ")
 	scanner2 := reader2.Scan() // scan input
 	if scanner1 {              //if input exist
 		number, err := strconv.ParseInt(reader1.Text(), 10, 32) // conver input into integer
