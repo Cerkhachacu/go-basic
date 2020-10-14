@@ -1,0 +1,15 @@
+buatlah interface yang berisi 2 method rataKanan dan rataKiri,
+kemudian buat function berdasarkan interface yang ada dan buatlah
+segitiga sesuai dengan nama fungsinya . 
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+* * * * *
+  * * * *
+    * * *
+      * *
+        *
