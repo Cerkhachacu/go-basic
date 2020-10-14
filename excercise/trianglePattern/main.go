@@ -17,30 +17,6 @@ type inputNumber struct {
 	number int64
 }
 
-func (number inputNumber) rataKanan() string {
-	var triangle string
-	var i = 1
-	for i <= int(number.number) {
-		triangle += strings.Repeat("* ", int(i)) + "\n"
-		i++
-	}
-	return triangle
-}
-
-func (number inputNumber) rataKiri() string {
-	var triangle string
-	var i = 0
-	for i < int(number.number) {
-		if i == 0 {
-			triangle += strings.Repeat("* ", int(number.number)-i) + "\n"
-		} else {
-			triangle += strings.Repeat(" ", i+i) + strings.Repeat("* ", int(number.number)-i) + "\n"
-		}
-		i++
-	}
-	return triangle
-}
-
 func main() {
 	reader1 := bufio.NewScanner(os.Stdin)
 	fmt.Print("Please enter the length of the Isosceles triangle : ")
@@ -73,4 +49,28 @@ func main() {
 			fmt.Println("Invalid input, only number is accepted")
 		}
 	}
+}
+
+func (number inputNumber) rataKanan() string {
+	var triangle string
+	var i = 1
+	for i <= int(number.number) {
+		triangle += strings.Repeat("* ", int(i)) + "\n"
+		i++
+	}
+	return triangle
+}
+
+func (number inputNumber) rataKiri() string {
+	var triangle string
+	var i = 0
+	for i < int(number.number) {
+		if i == 0 {
+			triangle += strings.Repeat("* ", int(number.number)-i) + "\n"
+		} else {
+			triangle += strings.Repeat(" ", i+i) + strings.Repeat("* ", int(number.number)-i) + "\n"
+		}
+		i++
+	}
+	return triangle
 }
