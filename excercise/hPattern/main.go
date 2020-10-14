@@ -25,7 +25,7 @@ func main() {
 				if err == nil {
 					switch methodChosen {
 					case 1:
-						patternH1(number) // calling function to create the pattern
+						fmt.Print(patternH1(number)) // calling function to create the pattern
 					case 2:
 						patternH2(number)
 					case 3:
@@ -43,36 +43,38 @@ func main() {
 	}
 }
 
-func patternH1(number int64) { // success convert to integer
+func patternH1(number int64) string { // success convert to integer
+	output := ""
+	var numberCu int64 = number*number + 1
+	var i int64 = 1
+	mid := math.Ceil(float64(number) / 2)
+	var r float64 = 1
+	firstCol := true
 	if number%2 != 0 && number > 1 { // cek if input is odd number
-		var numberCu int64 = number*number + 1
-		var i int64 = 1
-		mid := math.Ceil(float64(number) / 2)
-		var r float64 = 1
-		firstCol := true
 		for i < numberCu { // as long as
 			if i%number != 0 { // if i modulus number equal 0
 				if firstCol {
-					fmt.Print("* ")
+					output += "* "
 					firstCol = false
 				} else {
 					if r == mid {
-						fmt.Print("* ")
+						output += "* "
 						firstCol = false
 					} else {
-						fmt.Print("= ")
+						output += "= "
 					}
 				}
 			} else {
 				r++
-				fmt.Print("*\n")
+				output += "*\n"
 				firstCol = true
 			}
 			i++
 		}
 	} else { // if the input is not an odd number print error
-		fmt.Println("Please input an odd number that is bigger than one")
+		output = "Please input an odd number that is bigger than one"
 	}
+	return output
 }
 
 func patternH2(number int64) { // success convert to integer
