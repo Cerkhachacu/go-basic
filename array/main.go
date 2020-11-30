@@ -15,5 +15,6 @@ func main() {
 	log.Println(multi)
 	log.Println(len(multi))
 	log.Println(multi)
+	log.Println(multi)
 
 }
